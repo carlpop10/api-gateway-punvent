@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: punvent-api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: punvent-api
+          uri: ${PUNVENT_SERVICE_URL:http://localhost:8080}
+          predicates:
+            - Path=/api/v1/**
+        - id: punvent-openapi
+          uri: ${PUNVENT_SERVICE_URL:http://localhost:8080}
+          predicates:
+            - Path=/v3/api-docs/**,/swagger-ui.html,/swagger-ui/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

@@ -1,0 +1,39 @@
+# Maven / Java build outputs
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# Java
+*.class
+
+# Temporary files
+*.tmp
+*.swp
+
+# Environment and local config
+.env
+.env.*
+application-local.yml
+application-local.yaml
+
+# Secrets / credentials
+*.jks
+*.p12
+*.keystore
+*.pem
+*.key
