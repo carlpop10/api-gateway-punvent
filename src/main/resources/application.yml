@@ -8,11 +8,11 @@ spring:
     gateway:
       routes:
         - id: punvent-api
-          uri: ${PUNVENT_SERVICE_URL:http://localhost:8080}
+          uri: ${PUNVENT_SERVICE_URL:http://localhost:3031}
           predicates:
             - Path=/api/v1/**
         - id: punvent-openapi
-          uri: ${PUNVENT_SERVICE_URL:http://localhost:8080}
+          uri: ${PUNVENT_SERVICE_URL:http://localhost:3031}
           predicates:
             - Path=/v3/api-docs/**,/swagger-ui.html,/swagger-ui/**
 
