@@ -7,6 +7,10 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: punvent-shift-events
+          uri: ${PUNVENT_WEBSOCKET_URL:ws://localhost:3031}
+          predicates:
+            - Path=/ws/shift-events
         - id: punvent-api
           uri: ${PUNVENT_SERVICE_URL:http://localhost:3031}
           predicates:
