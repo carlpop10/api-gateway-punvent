@@ -27,6 +27,6 @@ management:
         include: health,info
 app:
   auth:
-    jwt-secret: ${JWT_SECRET:change-this-development-jwt-secret-at-least-32-bytes}
+    jwt-secret: ${JWT_SECRET}
     issuer: ${JWT_ISSUER:punvent-service}
     audience: ${JWT_AUDIENCE:punvent-api}
