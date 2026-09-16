@@ -29,7 +29,7 @@ public class BearerTokenValidationFilter implements GlobalFilter, Ordered {
     private final String audience;
 
     public BearerTokenValidationFilter(ObjectMapper mapper,
-            @Value("${app.auth.jwt-secret:change-this-development-jwt-secret-at-least-32-bytes}") String secret,
+            @Value("${app.auth.jwt-secret}") String secret,
             @Value("${app.auth.issuer:punvent-service}") String issuer,
             @Value("${app.auth.audience:punvent-api}") String audience) {
         this.mapper = mapper; this.secret = secret.getBytes(StandardCharsets.UTF_8);

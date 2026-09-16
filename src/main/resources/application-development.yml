@@ -1,0 +1,7 @@
+spring:
+  config:
+    activate:
+      on-profile: development
+    import:
+      - optional:file:.env.development[.properties]
+      - optional:file:./api-gateway-punvent/.env.development[.properties]

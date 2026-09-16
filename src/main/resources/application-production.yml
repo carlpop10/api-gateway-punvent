@@ -1,0 +1,7 @@
+spring:
+  config:
+    activate:
+      on-profile: production
+    import:
+      - optional:file:.env.production[.properties]
+      - optional:file:./api-gateway-punvent/.env.production[.properties]
